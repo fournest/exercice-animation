@@ -197,3 +197,47 @@ body {
         width: 40ch;
     }
 }
+
+/* exercice8 */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    position: relative;
+}
+
+.element {
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    animation: deplaceGrille 4s infinite;
+}
+
+@keyframes deplaceGrille {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(110px, 0);
+        background-color: aqua;
+    }
+
+    50% {
+        transform: translate(110px, 110px);
+    }
+
+    75% {
+        transform: translate(0, 110px);
+        background-image: url("https://cdn.pixabay.com/photo/2025/03/31/21/30/italy-9505446_1280.jpg");
+        background-size: cover;
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
